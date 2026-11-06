@@ -1,0 +1,399 @@
+@charset "UTF-8";
+/* ==============================
+   ADMIN LOGIN PAGE
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.admin-login-body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #101828, #263b63);
+
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+.login-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.login-header h1 {
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-header p {
+    margin-top: 8px;
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+.login-card {
+    background: white;
+    padding: 35px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.login-card h2 {
+    font-size: 25px;
+    color: #172554;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: border 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #1d4ed8;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #b91c1c;
+
+    padding: 12px;
+    border-radius: 6px;
+
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.success-message {
+    background: #dcfce7;
+    color: #166534;
+
+    padding: 12px;
+    border-radius: 6px;
+
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-footer p {
+    font-size: 13px;
+    color: #475569;
+}
+
+.login-footer span {
+    display: block;
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 480px) {
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-header h1 {
+        font-size: 28px;
+    }
+
+    .login-card h2 {
+        font-size: 22px;
+    }
+
+}
+/* ADMIN DASHBOARD LAYOUT */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f1f5f9;
+}
+
+.sidebar {
+    width: 240px;
+    background: #172554;
+    color: white;
+    padding: 25px 15px;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 5px;
+}
+
+.sidebar p {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 6px;
+    margin-bottom: 7px;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    color: #172554;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.dashboard-card h3 {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.dashboard-card h2 {
+    margin-top: 15px;
+    color: #2563eb;
+    font-size: 28px;
+}
+
+.dashboard-welcome,
+.admin-form-container,
+.table-container {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.admin-form-container {
+    max-width: 750px;
+}
+
+.admin-form-container h2,
+.table-container h2 {
+    margin-bottom: 20px;
+}
+
+.admin-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+.secondary-btn {
+    background: #64748b;
+    color: white;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+.table-container th,
+.table-container td {
+    padding: 14px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.table-container th {
+    background: #eff6ff;
+    color: #172554;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 12px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .admin-content {
+        padding: 18px;
+    }
+}
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+/* Consistent Admin Sidebar */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.sidebar-header {
+    flex-shrink: 0;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar-logout {
+    margin-top: auto;
+    width: 100%;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.sidebar-logout .logout-btn {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
